@@ -1,0 +1,36 @@
+.content {
+    height: 100vh;
+    background-color: lightgray;
+    margin: auto;
+    width: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+}
+.search-bar {
+    background-color: slateblue;
+}
+.info {
+    justify-content: start;
+    display: flex;
+    background-color:palegoldenrod;
+}
+.directions {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+}
+.image-container {
+    width: 20%;
+    float: left;
+}
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    /* height: auto if width specify only */
+}
+.clearfix {
+    clear: both;
+}
+

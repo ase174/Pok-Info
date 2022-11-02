@@ -1,0 +1,9 @@
+select, option {
+    /*background-image: url("../../images/red-blue.png");*/
+    /*background-image: linear-gradient(to right, yellow, yellow);*/
+    /*background-color: yellow;*/
+    background-image: url("../../images/pokeball-fancy.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+}
