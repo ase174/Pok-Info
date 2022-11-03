@@ -1,17 +1,20 @@
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import VersionSelector from './components/VersionSelector/VersionSelector';
+import ResultsContainer from './components/ResultsContainer/ResultsContainer';
 import { useState } from 'react';
 
 
 function App() {
 
   const [selectedGame, setSelectedGame] = useState('')
+  const [pokeQuery, setPokeQuery] = useState('')
+
   return (
     <div className="content">
       <div className="flex search-bar">
         <VersionSelector setSelectedGame={setSelectedGame} />
-        <SearchBar />
+        <SearchBar pokeQuery={pokeQuery} setPokeQuery={setPokeQuery}/>
       </div>
       <div className="image-container">
           <img className="image" src={require("./images/red-blue.png")} />
@@ -26,8 +29,8 @@ function App() {
           </li>
           </ul>
       </div>
-      <div class="info clearfix">
-        <p>Results</p>
+      <div className="info clearfix">
+        <ResultsContainer selectedGame={selectedGame}/>
       </div>
     </div>
   );

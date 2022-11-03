@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './VersionSelector.css';
 import { useState } from 'react';
 
-const VersionSelector = ({setSelectedGame}) => {
+const VersionSelector = ({ setSelectedGame }) => {
 
     const [versions, setVersions] = useState([]);
     const [selVer, setSelVer] = useState('')
@@ -17,9 +17,9 @@ const VersionSelector = ({setSelectedGame}) => {
     }
     useEffect(() => {
         fetchVersions();
-    }, []);
+    }, [selVer]);
 
-    const handleSelect = (selectedGame) =>{
+    const handleSelect = (selectedGame) => {
         setSelVer(selectedGame)
         setSelectedGame(selectedGame)
     }
@@ -29,7 +29,7 @@ const VersionSelector = ({setSelectedGame}) => {
                 <select required className={selVer} onChange={e => handleSelect(e.target.value)}>
                     {versions.map((version, index) =>
                         <option className={version.name} value={version.name} key={index}>
-                                {version.name}
+                            {version.name}
                         </option>
                     )}
                 </select>
