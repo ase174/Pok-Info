@@ -7,17 +7,17 @@ import { useState } from 'react';
 
 function App() {
 
-  const [selectedGame, setSelectedGame] = useState('')
+  const [selectedGame, setSelectedGame] = useState('red-blue')
   const [pokeQuery, setPokeQuery] = useState('')
 
   return (
     <div className="content">
       <div className="flex search-bar">
         <VersionSelector setSelectedGame={setSelectedGame} />
-        <SearchBar pokeQuery={pokeQuery} setPokeQuery={setPokeQuery}/>
+        <SearchBar pokeQuery={pokeQuery} setPokeQuery={setPokeQuery} />
       </div>
       <div className="image-container">
-          <img className="image" src={require("./images/red-blue.png")} />
+        <img className="image" src={require("./images/pokemon-logo.png")} />
         </div>
       <div className="directions">
         <ul>
@@ -27,10 +27,10 @@ function App() {
           <li>
             Optional: Add /moves /abilities /routes /evolution
           </li>
-          </ul>
+        </ul>
       </div>
       <div className="info clearfix">
-        <ResultsContainer selectedGame={selectedGame}/>
+        <ResultsContainer selectedGame={selectedGame} />
       </div>
     </div>
   );

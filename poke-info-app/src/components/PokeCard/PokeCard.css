@@ -1,0 +1,11 @@
+.card-container{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    float: left;
+    width: 200px;
+    margin: 2px;
+}
+.name{
+    text-align: center;
+}
