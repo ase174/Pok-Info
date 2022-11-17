@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import './PokeCard.css';
 
 const PokeCard = ({name, url}) => {
-    //console.log(url + name)
+    //console.log(url)
     return (
         <>
         <div className="card-container">
